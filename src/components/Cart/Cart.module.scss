@@ -1,5 +1,5 @@
 .cart__wrapper {
-    @apply mx-2 sm:mx-5 md:mx-10 lg:mx-20 min-h-screen pt-3;
+    @apply mx-2 sm:mx-5 md:mx-10 min-h-screen lg:mx-20  pt-3;
 
     .cart__empty {
         @apply uppercase text-center text-base sm:text-xl md:text-2xl tracking-widest font-thin text-stone-300 my-4;
@@ -9,7 +9,7 @@
         @apply flex h-fit justify-between items-center border-b-[1px] border-stone-700 py-2;
 
         img {
-            @apply min-w-[64px] md:mx-5 w-16 sm:w-20;
+            @apply  md:mx-5 min-w-[64px] w-16 sm:w-20;
         }
 
         .item__details {
@@ -29,7 +29,7 @@
                 @apply my-1 md:my-3 text-center whitespace-nowrap;
             }
             i {
-                @apply translate-x-[2px] -translate-y-[3px] cursor-pointer hover:text-green-600;
+                @apply translate-x-[2px] -translate-y-[3px] hover:text-green-600 cursor-pointer;
             }
         }
         .item__remove {
@@ -43,9 +43,9 @@
         }
 
         .cart__button {
-            @apply flex flex-nowrap uppercase items-center whitespace-nowrap justify-between bg-green-700 bg-opacity-70 w-56 px-8 md:h-16 lg:w-64 h-10 text-base tracking-widest font-thin hover:bg-opacity-100;
+            @apply flex flex-nowrap uppercase items-center whitespace-nowrap justify-between bg-green-700 bg-opacity-70 w-56 px-8 md:h-16 lg:w-64 h-10 text-base tracking-widest hover:bg-opacity-100 font-thin;
             i {
-                @apply translate-x-1 -translate-y-[2px];
+                @apply -translate-y-[2px] translate-x-1;
             }
         }
     }
