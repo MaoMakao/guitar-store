@@ -11,20 +11,19 @@ import UserAccount from "./components/UserAccount/UserAccount";
 import Checkout from "./components/Checkout/Checkout";
 import "./index.css";
 import Layout from "./components/Layout";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { setUser } from "./redux/reducers/userSlice";
-import { useAuth } from './hoc/user-auth';
+import { useAuth } from "./hoc/user-auth";
 
 const App = () => {
-    const dispatch = useDispatch();
-    const { isAuth } = useAuth();
+  const dispatch = useDispatch();
+  const { isAuth } = useAuth();
   useEffect(() => {
     const user = localStorage.getItem("user");
 
     if (user && !isAuth) {
       const member = JSON.parse(user);
       dispatch(setUser(member));
-
     }
   }, []);
 
@@ -47,7 +46,7 @@ const App = () => {
   ];
 
   return (
-    <Routes>
+    <Routes basename="/guitar-store/">
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         {routes.map((route) => (
